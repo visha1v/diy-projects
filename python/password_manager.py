@@ -16,8 +16,3 @@ class PasswordManager:
             return self.cipher_suite.decrypt(encrypted_password).decode()
         else:
             return None
-
-# Example usage
-pm = PasswordManager()
-pm.add_password('email', 'my_secure_password')
-print(f"Decrypted password for 'email': {pm.get_password('email')}")
