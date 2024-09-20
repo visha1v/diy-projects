@@ -24,17 +24,3 @@ def send_email_notification(subject, body, to_email):
     server.login(from_email, password)
     server.sendmail(from_email, to_email, msg.as_string())
     server.quit()
-
-# Example usage
-api_key = "my_alphavantage_api_key"
-symbol = "AAPL"
-threshold_price = 150.00
-to_email = "my_email@example.com"
-
-price = get_stock_price(symbol, api_key)
-if price < threshold_price:
-    send_email_notification(
-        subject=f"Stock Alert: {symbol} below ${threshold_price}",
-        body=f"The current price of {symbol} is ${price}.",
-        to_email=to_email
-    )
