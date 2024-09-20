@@ -10,8 +10,3 @@ def get_weather(city, api_key):
         return f"Temperature: {temp}°C, Weather: {weather}"
     else:
         return "Error fetching data"
-
-# Example usage
-api_key = "my_openweathermap_api_key"
-city = "New York"
-print(get_weather(city, api_key))
